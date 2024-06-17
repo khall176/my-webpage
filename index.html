@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Pie</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resource.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>The Dessert of Desserts!</h1>
+        <p id="description">Apple pie, a sweet classic often served with a scoop of vanilla ice cream. With its flaky, buttery crust; tart-sweet apples.</p>
+        <p><i>The wonderful cinnamon aroma. Just the smell can have you hooked!</i></p>
+        <img id="apple-pie-img" src="https://up.yimg.com/ib/th?id=OIP.CnU6aoJZHsAo_uBAZCsbxQAAAA&pid=Api&rs=1&c=1&qlt=95&w=202&h=113" alt="Apple pie">
+        <br><br>
+        <a href="https://www.inspiredtaste.net/43362/apple-pie/">Apple Pie</a>
+        <br><br>
+        <button onclick="toggleImage()">Toggle Image</button>
+        <button onclick="changeTextColor()">Change Text Color</button>
+    </main>  
+
+    <script>
+        // welcomealert - feature1
+        window.onload = function() {
+            alert("Welcome to the Apple Pie page!");
+        };
+
+        // imagetoggle - feature2
+        function toggleImage() {
+            var img = document.getElementById("apple-pie-img");
+			//checks if image is hidden
+            if (img.style.display === "none")	{
+                // shows the image
+				img.style.display = "block";
+            } else {
+                // hides the image
+				img.style.display = "none";
+            }
+        }
+
+        // changecolor! - feature3 
+        function changeTextColor() {
+            var description = document.getElementById("description");
+		// changes from blue to black, if preferred :)
+            description.style.color = description.style.color === "blue" ? "black" : "blue";
+        }
+    </script>
+</body>
+</html>
+
